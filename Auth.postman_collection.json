@@ -1,0 +1,220 @@
+{
+	"info": {
+		"_postman_id": "d20f6065-f683-46c1-965a-79299cc9e499",
+		"name": "Auth",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8299726"
+	},
+	"item": [
+		{
+			"name": "LOGIN",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"username\":\"kamilom@gmail.com\",\r\n\"password\":\"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/user/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SIGNUP",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"kamilo m\",\r\n    \"email\":\"kamilom@gmail.com\",\r\n    \"password\":\"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/auth/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREATETODO",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NDMsIm5hbWUiOiJrYW1pbG8gbSIsImVtYWlsIjoia2FtaWxvbUBnbWFpbC5jb20iLCJ1cGRhdGVkQXQiOiIyMDIyLTExLTI5VDIzOjQ3OjQyLjEwOVoiLCJjcmVhdGVkQXQiOiIyMDIyLTExLTI5VDIzOjQ3OjQyLjEwOVoiLCJpYXQiOjE2Njk3NjU2NjIsImV4cCI6MTY2OTkzODQ2Mn0.rg9g1kTBDvmJcX0u6LsIexNeBrOaprVxdxuUOMpYw6Y",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"mmmmmmmmmmmm\",\r\n    \"description\":\"something to happen\",\r\n    \"date\":\"2022-11-29\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/todo/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"todo",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GETTODOBYID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/todo/29",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"todo",
+						"29"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATETODO",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"mmmmmmmmmmmm\",\r\n    \"description\":\"hello testing\",\r\n    \"date\":\"2022-11-29\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/todo/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"todo",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETETODO",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NDMsIm5hbWUiOiJrYW1pbG8gbSIsImVtYWlsIjoia2FtaWxvbUBnbWFpbC5jb20iLCJ1cGRhdGVkQXQiOiIyMDIyLTExLTI5VDIzOjQ3OjQyLjEwOVoiLCJjcmVhdGVkQXQiOiIyMDIyLTExLTI5VDIzOjQ3OjQyLjEwOVoiLCJpYXQiOjE2Njk3NjU2NjIsImV4cCI6MTY2OTkzODQ2Mn0.rg9g1kTBDvmJcX0u6LsIexNeBrOaprVxdxuUOMpYw6Y",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/todo/30",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"todo",
+						"30"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ALLTODOS",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/todo/todos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"todo",
+						"todos"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
